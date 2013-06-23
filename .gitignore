@@ -1,6 +1,17 @@
 *.class
 
+# IDE files
+.idea
+*.iml
+
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# OS-specific files
+.DS_Store
+gen
+gen-*
+target
+out
