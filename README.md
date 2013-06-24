@@ -22,19 +22,35 @@ public class AccountModelValidationTest {
     }
 
     @Test
+    public void email() {
+        String propertyName = "email";
+        String anyValidEmail = "john@doe.com";
+
+        assertions.assertThat(propertyName)
+                .shouldNotBeAnEmptyString()
+                .withPropertyValue(anyValidEmail).isValid()
+                .withPropertyValue(anyValidEmail + repeat("x", 101 - anyValidEmail.length())).isNotValid();
+
+    }
+
+    @Test
     public void firstName() {
         String propertyName = "firstName";
 
         assertions.assertThat(propertyName)
-                .withPropertyValue(null).isNotValid()
-                .withPropertyValue("").isNotValid()
-                .withPropertyValue(" ").isNotValid()
-                .withPropertyValue(repeat("x", 4)).isNotValid()
-                .withPropertyValue(repeat("x", 21)).isNotValid();
+                .shouldNotBeAnEmptyString()
+                .hasCharacterSize(5, 20);
+
+    }
+
+    @Test
+    public void lastName() {
+        String propertyName = "lastName";
 
         assertions.assertThat(propertyName)
-                .withPropertyValue(repeat("x", 5)).isValid()
-                .withPropertyValue(repeat("x", 20)).isValid();
+                .shouldNotBeAnEmptyString()
+                .hasCharacterSize(5, 20);
+
     }
 }
 
@@ -45,12 +61,17 @@ AccountModel.java
 ```java
 public class AccountModel {
     
+    @NotEmpty
+    @Email
+    @Size(max = 100)
     private String email;
 
     @NotEmpty
     @Size(min=5, max=20)
     private String firstName;
 
+    @NotEmpty
+    @Size(min=5, max=20)
     private String lastName;
 
     public AccountModel() {
