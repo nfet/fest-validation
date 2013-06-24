@@ -3,6 +3,11 @@ fest-validation
 
 A collection of fest-based assertions for JSR-303 Validation
 
+A Quick Example
+---------------
+
+AccountModelValidationTest.java
+
 ```java
 
 public class AccountModelValidationTest {
@@ -33,4 +38,24 @@ public class AccountModelValidationTest {
     }
 }
 
+```
+
+AccountModel.java
+
+```java
+public class AccountModel {
+    
+    private String email;
+
+    @NotEmpty
+    @Size(min=5, max=20)
+    private String firstName;
+
+    private String lastName;
+
+    public AccountModel() {
+    }
+
+    // getters-and-setters
+}
 ```
