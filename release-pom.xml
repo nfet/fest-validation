@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.easytesting.validation</groupId>
+  <artifactId>fest-validation-parent</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>fest-validation-parent</name>
+  <description>Parent POM Fest Validation</description>
+  <url>https://github.com/nfet/fest-validation</url>
+  <organization>
+    <name>FEST (Fixtures for Easy Software Testing)</name>
+    <url>http://fest.easytesting.org</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>LICENSE.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>alexruiz</id>
+      <name>Alex Ruiz</name>
+      <email>alex.ruiz.05 at gmail.com</email>
+      <url>http://alexruiz.developerblogs.com</url>
+      <roles>
+        <role>Owner</role>
+        <role>Developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>wanghy</id>
+      <name>Yvonne Wang</name>
+      <email>wanghy1101 at gmail.com</email>
+      <roles>
+        <role>Owner</role>
+        <role>Developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>joel</id>
+      <name>Joel Costigliola</name>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>konermann</id>
+      <name>Ansgar Konermann</name>
+      <url>http://passion.forco.de/</url>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+  </developers>
+  <modules>
+    <module>lib</module>
+    <module>example</module>
+  </modules>
+  <scm>
+    <connection>scm:git:git://github.com/nfet/fest-validation.git</connection>
+    <developerConnection>scm:git:git@github.com:nfet/fest-validation.git</developerConnection>
+    <url>https://github.com/nfet/fest-validation</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/nfet/fest-validation/issues</url>
+  </issueManagement>
+  <distributionManagement>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Nexus Release Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <properties>
+    <maven-failsafe-plugin.version>2.11</maven-failsafe-plugin.version>
+    <maven-release-plugin.version>2.2.2</maven-release-plugin.version>
+    <maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
+    <cobertura-maven-plugin.version>2.5.2</cobertura-maven-plugin.version>
+    <android.sdk.home>/usr/local/android-sdk-macosx</android.sdk.home>
+    <maven-surefire-plugin-version>2.14.4</maven-surefire-plugin-version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <android.sdk.path>/usr/local/android-sdk-macosx</android.sdk.path>
+    <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
+    <jdk-version>1.6</jdk-version>
+  </properties>
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>libs-release</name>
+      <url>http://artifactory.sensibledroids.com/libs-release</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>snapshots</id>
+      <name>libs-snapshot</name>
+      <url>http://artifactory.sensibledroids.com/libs-snapshot</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>plugins-release</name>
+      <url>http://artifactory.sensibledroids.com/plugins-release</url>
+    </pluginRepository>
+    <pluginRepository>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>snapshots</id>
+      <name>plugins-snapshot</name>
+      <url>http://artifactory.sensibledroids.com/plugins-snapshot</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <build>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <scriptSourceDirectory>/Users/tony/sandbox/github/fest-validation/src/main/scripts</scriptSourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
+    <outputDirectory>target/classes</outputDirectory>
+    <testOutputDirectory>target/test-classes</testOutputDirectory>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>src/test/resources</directory>
+      </testResource>
+    </testResources>
+    <directory>target</directory>
+  </build>
+  <reporting>
+    <outputDirectory>target/site</outputDirectory>
+  </reporting>
+</project>
