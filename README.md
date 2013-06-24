@@ -6,7 +6,7 @@ A collection of fest-based assertions for JSR-303 Validation.
 A Quick Example
 ---------------
 
-AccountModelValidationTest.java
+[AccountModelValidationTest.java](https://github.com/nfet/fest-validation/blob/1.0.0.RELEASE/example/src/test/java/org/easytesting/validation/example/AccountModelValidationTest.java)
 
 ```java
 
@@ -56,7 +56,7 @@ public class AccountModelValidationTest {
 
 ```
 
-AccountModel.java
+[AccountModel.java](https://github.com/nfet/fest-validation/blob/1.0.0.RELEASE/example/src/main/java/org/easytesting/validation/example/AccountModel.java)
 
 ```java
 public class AccountModel {
