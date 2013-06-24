@@ -5,13 +5,13 @@
     <parent>
         <groupId>org.easytesting.validation</groupId>
         <artifactId>fest-validation-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>org.easytesting.validation.example</groupId>
     <artifactId>fest-validation-example</artifactId>
     <name>fest-validation-example</name>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <packaging>jar</packaging>
 
@@ -49,7 +49,7 @@
         <dependency>
             <groupId>${project.parent.groupId}</groupId>
             <artifactId>fest-validation</artifactId>
-            <version>1.0.0</version>
+            <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
