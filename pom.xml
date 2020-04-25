@@ -5,7 +5,7 @@
     <groupId>org.easytesting.validation</groupId>
     <artifactId>fest-validation-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.5-SNAPSHOT</version>
+    <version>1.0.5</version>
 
     <name>fest-validation-parent</name>
     <description>Parent POM Fest Validation</description>
@@ -20,7 +20,8 @@
         <developerConnection>scm:git:git@github.com:nfet/fest-validation.git</developerConnection>
         <connection>scm:git:git://github.com/nfet/fest-validation.git</connection>
         <url>https://github.com/nfet/fest-validation</url>
-    </scm>
+      <tag>fest-validation-parent-1.0.5</tag>
+  </scm>
 
     <issueManagement>
         <system>github</system>
