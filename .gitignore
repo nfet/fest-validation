@@ -18,4 +18,4 @@ out
 
 # maven release
 release.properties
-.releaseBackup
+*.releaseBackup
