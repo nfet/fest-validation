@@ -7,7 +7,7 @@ mvn --batch-mode release:prepare
 
 # Release
 ```shell script
-mvn release:perform -Dmaven.javadoc.skip=true
+mvn release:perform
 ```
 
 # Rolling back a release
