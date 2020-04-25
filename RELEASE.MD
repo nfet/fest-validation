@@ -18,6 +18,12 @@ mvn release:clean
 
 ## Miscellaneous
 
+### Delete a local tag and push
+```shell script
+git tag -d <tag-name> 
+git push --tags
+```
+
 ### Delete a remote tag
 
 ```shell script
