@@ -15,3 +15,11 @@ mvn release:perform -Dmaven.javadoc.skip=true
 mvn release:rollback
 mvn release:clean
 ```
+
+## Miscellaneous
+
+### Delete a remote tag
+
+```shell script
+git push --delete origin <tag-name> 
+```
