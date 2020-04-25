@@ -15,3 +15,7 @@ gen
 gen-*
 target
 out
+
+# maven release
+release.properties
+.releaseBackup
