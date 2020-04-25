@@ -21,7 +21,7 @@ mvn release:clean
 ### Delete a local tag and push
 ```shell script
 git tag -d <tag-name> 
-git push --tags
+git push origin :refs/tags/<tag-name>
 ```
 
 ### Delete a remote tag
